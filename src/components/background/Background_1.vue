@@ -42,7 +42,6 @@ export default {
   display: flex;
   color: white;
   height: 700px;
-  font-weight: bold;
   font-family: 'Ubuntu', sans-serif;
   text-align: justify;
 }
