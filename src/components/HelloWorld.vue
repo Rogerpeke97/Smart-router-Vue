@@ -4,7 +4,7 @@
 <template>
   <div class="hello">
     <BackgroundOne></BackgroundOne>
-    <h1>{{ msg }}</h1>
+    <h1>{{ count }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -40,7 +40,8 @@ export default {
   components: { BackgroundOne },
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+    count: Number
   }
 }
 </script>

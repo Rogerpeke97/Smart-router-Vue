@@ -1,6 +1,6 @@
 <template>
   <Nav_bar />
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld msg="Welcome to Your Vue.js App" v-bind:count=count />
 </template>
 
 <script>
@@ -8,6 +8,11 @@ import HelloWorld from './components/HelloWorld.vue'
 import Nav_bar from './Nav_bar.vue'
 export default {
   name: 'App',
+  data(){
+    return{
+      count: 7
+    }
+  },
   components: {
     HelloWorld, Nav_bar
   }

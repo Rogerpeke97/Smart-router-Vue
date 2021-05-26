@@ -1,7 +1,15 @@
 <template>
     <div class="background_main">
       <div class="left_side_text">
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div :style = "styleTitle">
+          Using 
+          <a href="https://www.okex.com/" rel="noopener noreferrer" target="_blank" class= "font-awesome_nav_bar">
+            Okex
+          </a>
+          API...
+        </div>
+        <br/><br/><br/>
         Smart Order Routing or shortly SOR is indeed a perfect tool 
         to cope with ever changing prices and liquidity problems. 
         This is an automated tool that helps process orders at the 
@@ -30,6 +38,13 @@ export default {
       y = y / 100;
       e.currentTarget.style.transform = `perspective(700px) rotateY(${x - 20}deg) rotateX(${ y + 10}deg)`;
     }
+  },
+  data(){
+    return{
+      styleTitle:{
+        fontSize: '3rem'
+      }
+    }
   }
 }
 </script>
@@ -47,8 +62,10 @@ export default {
 }
 .left_side_text{
   flex: 35%;
-  margin-left: 10px;
-
+  border-radius: 12px;
+  background: #001528;
+  padding: 1%;
+  text-align: justify;
 }
 .right_side_text{
   flex: 50%;
