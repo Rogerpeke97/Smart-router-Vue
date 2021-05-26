@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div class="font-awesome_container">
-                <div class="hamburguer" v-bind:class="{'open': bool}" @click="transform_hamburguer" >
+                <div class="hamburguer" v-bind:class="{'open': bool}" @click="setShow()" >
                     <span></span>
                     <span></span>
                     <span></span>
@@ -32,17 +32,20 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons'
 library.add(faUserSecret, faGithub, faBars)
 
 export default {
-  name: 'Nav_bar',
-  data(){
-      return{
-        bool: false
-      }
-  },
-  methods: {
-    transform_hamburguer: function(e){
-        this.bool = this.bool ? false : true;
+    name: 'Nav_bar',
+    data(){
+        return{
+            bool: false
+        }
+    },
+    emits: ["updateParentData"],
+    methods: {
+        setShow(){
+            this.bool = this.bool ? false : true;
+            this.$emit('updateParentData', this.bool);
+            console.log(this.bool)
+        }
     }
-  }
 }
 </script>
 
@@ -67,6 +70,7 @@ export default {
     height: 50px;
     display: flex;
     text-align: right;
+    padding-right: 10px;
     align-content: center;
     align-items: center;
 }

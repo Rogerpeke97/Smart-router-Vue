@@ -1,21 +1,26 @@
 <template>
-  <Nav_bar />
-  <HelloWorld msg="Welcome to Your Vue.js App" v-bind:count=count />
+  <Nav_bar v-bind:showSideMenu="showSideMenu" @updateParentData = "setShow" />
+  <HelloWorld msg="Welcome to Your Vue.js App" v-bind:showSideMenu="showSideMenu" />
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import Nav_bar from './Nav_bar.vue'
+import Nav_bar from '../src/components/nav_bar/Nav_bar.vue'
 export default {
   name: 'App',
   data(){
     return{
-      count: 7
+      showSideMenu: false
     }
   },
   components: {
     HelloWorld, Nav_bar
-  }
+  },
+  methods: {
+    setShow(value){
+      this.showSideMenu = value;
+    },
+}
 }
 </script>
 
@@ -31,12 +36,12 @@ export default {
   margin: 0;
 }
 
-html body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: white;
-  width: 100vw;
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+    width: 100vw;
 }
 
 </style>

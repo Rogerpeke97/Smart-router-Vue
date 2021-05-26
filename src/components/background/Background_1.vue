@@ -9,7 +9,7 @@
           </a>
           API...
         </div>
-        <br/><br/><br/>
+        <br/><br/>
         Smart Order Routing or shortly SOR is indeed a perfect tool 
         to cope with ever changing prices and liquidity problems. 
         This is an automated tool that helps process orders at the 
@@ -17,15 +17,19 @@
         In order to provide the best offer, it checks the current rate 
         for any selected pair across different exchanges and helps to find 
         the route to make a switch.
+        <br/><br/><br/>
+        <div class="website_button">Get started!</div>
       </div>
       <div class="right_side_text" v-on:mousemove="transform_carbon">
         <img class="right_side_image" src="carbon.svg" alt="Smart router logo" />
       </div>
+      <SideMenu v-bind:showSideMenu="showSideMenu" />
     </div>
 </template>
 
 
 <script>
+import SideMenu from './side_menu/SideMenu.vue';
 export default {
   name: 'BackgroundOne',
   methods: {
@@ -45,6 +49,12 @@ export default {
         fontSize: '3rem'
       }
     }
+  },
+  props: {
+    showSideMenu: Boolean
+  },
+  components:{
+    SideMenu
   }
 }
 </script>
@@ -56,9 +66,10 @@ export default {
   width: 100vw;
   display: flex;
   color: white;
-  height: 700px;
+  height: 100vh;
   font-family: 'Ubuntu', sans-serif;
   text-align: justify;
+  overflow: hidden;
 }
 .left_side_text{
   flex: 35%;
@@ -79,5 +90,26 @@ export default {
   max-height: 100%;
   min-height: 100%;
   object-fit: contain;
+}
+.website_button{
+    position: relative;
+    width: 130px;
+    height: 60px; 
+    left: 50%;
+    margin-left: -65px;
+    background: rgba(44,12,175,1);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s ease-out;
+    display: grid;
+    align-items: center;
+    z-index: 1;
+}
+.website_button:hover{
+  background: rgb(56, 16, 219);
 }
 </style>
