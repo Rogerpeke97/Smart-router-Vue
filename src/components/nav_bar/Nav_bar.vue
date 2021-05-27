@@ -3,7 +3,7 @@
         <div class="nav_options_container">
             <div class="nav_option_items">
                 {{"SmartRouter"}}
-                <img class= "nav_bar_img" src="diamond.png" alt="Smart router logo" />
+                <img class= "nav_bar_img" src="../../../public/diamond.png" alt="Smart router logo" />
             </div>
         </div>
         <div class="nav_options_container_right">
