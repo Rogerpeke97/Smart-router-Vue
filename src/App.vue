@@ -1,10 +1,10 @@
 <template>
   <Nav_bar v-bind:showSideMenu="showSideMenu" @updateParentData = "setShow" />
-  <HelloWorld msg="Welcome to Your Vue.js App" v-bind:showSideMenu="showSideMenu" />
+  <Main msg="Welcome to Your Vue.js App" v-bind:showSideMenu="showSideMenu" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Main from './components/Main.vue'
 import Nav_bar from '../src/components/nav_bar/Nav_bar.vue'
 export default {
   name: 'App',
@@ -14,7 +14,7 @@ export default {
     }
   },
   components: {
-    HelloWorld, Nav_bar
+    Main, Nav_bar
   },
   methods: {
     setShow(value){

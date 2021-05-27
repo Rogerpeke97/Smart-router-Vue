@@ -43,7 +43,7 @@ export default {
   data(){
     return{
       styleTitle:{
-        fontSize: '3rem',
+        fontSize: '250%',
         marginBottom: '30px'
       }
     }
@@ -61,7 +61,8 @@ export default {
 <style scoped>
 .background_main {
   background: linear-gradient(-90deg, #02203c, #001528);
-  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   display: flex;
   color: white;
   height: 1080px;
@@ -122,9 +123,23 @@ export default {
   }
   .left_side_text {
     padding-top: 100px;
+    padding-right: 2.5%;
   }
   .right_side_text {
     padding-top: 0px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .left_side_text {
+    font-size: 70%;
+  }
+  .right_side_text {
+    width: 80%;
+    position: relative;
+    left: 10%;
+  }
+  .right_side_image{
+    max-width: 100%;
   }
 }
 </style>

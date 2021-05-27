@@ -55,9 +55,7 @@ export default {
     background: linear-gradient(-90deg, #02203c, #001528);
     width: 100vw;
     height: 50px;
-    position: fixed;
     display: flex;
-    z-index: 2;
 }
 .nav_options_container {
     flex: 1;
@@ -72,7 +70,7 @@ export default {
     height: 50px;
     display: flex;
     text-align: right;
-    padding-right: 20px;
+    padding-right: 10px;
     align-content: center;
     align-items: center;
 }
@@ -108,6 +106,8 @@ export default {
 .font-awesome_nav_bar:hover{
     color: rgba(44,12,175,1);
 }
+/* Icon 1 */
+
 .hamburguer{
   width: 50px;
   height: 30px;

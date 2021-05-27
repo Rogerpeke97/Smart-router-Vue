@@ -50,6 +50,7 @@ export default {
     grid-template-rows: 25% 25% 25% 25%;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 .side_menu_container_active{
     position: fixed;
@@ -58,6 +59,7 @@ export default {
     height: 100vh;
     left: 75%;
     background: rgb(20, 100, 121);
+    z-index: 1;
 }
 .side_menu_container_active>div{
     cursor: pointer;
