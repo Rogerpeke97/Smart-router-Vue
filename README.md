@@ -1,6 +1,6 @@
 # Smart Router API
 
-Smart router Frontend for [Frontend(Coming soon)](https://google.com) using OKEX API.
+Smart router Frontend for [Smart Router](https://smartrouter.netlify.app/) using OKEX API.
 
 ![](public/showcase.gif)
 
