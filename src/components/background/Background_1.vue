@@ -1,7 +1,6 @@
 <template>
     <div class="background_main">
       <div class="left_side_text">
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <div :style = "styleTitle">
           Using 
           <a href="https://www.okex.com/" rel="noopener noreferrer" target="_blank" class= "font-awesome_nav_bar">
@@ -9,7 +8,6 @@
           </a>
           API...
         </div>
-        <br/><br/>
         Smart Order Routing or shortly SOR is indeed a perfect tool 
         to cope with ever changing prices and liquidity problems. 
         This is an automated tool that helps process orders at the 
@@ -17,7 +15,6 @@
         In order to provide the best offer, it checks the current rate 
         for any selected pair across different exchanges and helps to find 
         the route to make a switch.
-        <br/><br/><br/>
         <div class="website_button">Get started!</div>
       </div>
       <div class="right_side_text" v-on:mousemove="transform_carbon">
@@ -46,7 +43,8 @@ export default {
   data(){
     return{
       styleTitle:{
-        fontSize: '3rem'
+        fontSize: '3rem',
+        marginBottom: '30px'
       }
     }
   },
@@ -66,20 +64,23 @@ export default {
   width: 100vw;
   display: flex;
   color: white;
-  height: 100vh;
+  height: 1080px;
   font-family: 'Ubuntu', sans-serif;
   text-align: justify;
   overflow: hidden;
 }
 .left_side_text{
   flex: 35%;
+  padding-top: 350px;
   border-radius: 12px;
   background: #001528;
-  padding: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
   text-align: justify;
 }
 .right_side_text{
   flex: 50%;
+  padding-top: 120px;
   object-fit: contain;
   height: 600px;
   display: grid;
@@ -97,6 +98,7 @@ export default {
     height: 60px; 
     left: 50%;
     margin-left: -65px;
+    margin-top: 65px;
     background: rgba(44,12,175,1);
     border-radius: 5px;
     color: white;
@@ -111,5 +113,18 @@ export default {
 }
 .website_button:hover{
   background: rgb(56, 16, 219);
+}
+
+@media only screen and (max-width: 890px) {
+  .background_main {
+    display: grid;
+    grid-template-rows: 40% 60%;
+  }
+  .left_side_text {
+    padding-top: 100px;
+  }
+  .right_side_text {
+    padding-top: 0px;
+  }
 }
 </style>

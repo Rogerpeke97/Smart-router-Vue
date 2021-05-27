@@ -56,6 +56,8 @@ export default {
     width: 100vw;
     height: 50px;
     display: flex;
+    position: fixed;
+    z-index: 1;
 }
 .nav_options_container {
     flex: 1;

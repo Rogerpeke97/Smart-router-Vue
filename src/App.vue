@@ -36,12 +36,16 @@ export default {
   margin: 0;
 }
 
-body {
+html, body{
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: white;
     width: 100vw;
+    overflow-x: hidden;
+}
+body {
+  position: relative;
 }
 
 </style>
