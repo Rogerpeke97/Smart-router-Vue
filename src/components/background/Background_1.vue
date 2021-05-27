@@ -18,7 +18,7 @@
         <div class="website_button">Get started!</div>
       </div>
       <div class="right_side_text" v-on:mousemove="transform_carbon">
-        <img class="right_side_image" src="carbon.svg" alt="Smart router logo" />
+        <img class="right_side_image" src="../../../public/carbon.svg" alt="Smart router logo" />
       </div>
       <SideMenu v-bind:showSideMenu="showSideMenu" />
     </div>
